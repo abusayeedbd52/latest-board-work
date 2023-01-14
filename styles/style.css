@@ -1,6 +1,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
  /* common style */
+
  body {
      font-family: 'Poppins', sans-serif;
      background-color: #F3F1FF;
@@ -47,6 +48,8 @@
 
  .header-icon {
      display: flex;
+     width: 50%;
+     justify-content: center;
 
  }
 
@@ -58,8 +61,11 @@
 
  .nav-description {
      display: flex;
-     align-items: flex-start;
-     padding: 10px;
+     align-items: center;
+ }
+
+ .common {
+     margin-left: 20px;
  }
 
  /*-----------------------
@@ -184,28 +190,36 @@
          width: 100%
      }
 
-     .players, .blogs, .courses {
+     .players,
+     .blogs,
+     .courses {
 
          grid-template-columns: repeat(1, 1fr);
 
      }
-     .player, .blog{
-        flex-direction: column;
+
+     .player,
+     .blog {
+         flex-direction: column;
      }
 
  }
+
  /* tablet divice */
- @media only screen and (min-width: 688px) and (max-width: 992px){
-    .container{
-        width: 100%;
-    }
-    .players, .courses{
+ @media only screen and (min-width: 688px) and (max-width: 992px) {
+     .container {
+         width: 100%;
+     }
 
-        grid-template-columns: repeat(2, 1fr);
+     .players,
+     .courses {
+
+         grid-template-columns: repeat(2, 1fr);
+     }
+
+     .blogs {
+
+         grid-template-columns: repeat(1, 1fr);
+     }
+
  }
- .blogs{
-
-    grid-template-columns: repeat(1, 1fr);
-}
-
-}
